@@ -15,6 +15,20 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="a2ms4.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="contactHelpers.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="contacts.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="contactHelpers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="contacts.h">
       <Filter>Header Files</Filter>
     </ClInclude>
