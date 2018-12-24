@@ -1,10 +1,36 @@
-# BTP-Workshops
+# BTP-Project/Assignments (30% of term grade)
 
-## **Grade Breakdown:**
-* **Workshop 1: 1%**
-* **Workshop 2: 2%**
-* **Workshop 3: 4%**
-* **Workshop 4: 7%**
-* **Workshop 5: 6%**
-***
-  **Total     :20%**
+## Assignment-1 (15% of term grade)
+```
+Milestone   Assessment  Worth Term Grade
+=========== =========== ===== ==========
+1 (Lab)     Code          10%       1.5%
+----------------------- ----- ----------
+2 (Home)    Code          20%       3.0%
+            Reflection    20%       3.0%
+----------------------- ----- ----------
+3 (Lab)     Code          10%       1.5%
+----------------------- ----- ----------
+4 (Home)    Code          20%       3.0%
+            Reflection    20%       3.0%
+======================= ===== ==========
+                 Total:  100%      15.0%
+```
+****
+## Assignment-2 (15% of term grade)
+```
+Milestone   Assessment  Worth Term Grade
+=========== =========== ===== ==========
+1 (Lab)     Code          10%       1.5%
+----------------------- ----- ----------
+2 (Home)    Code          20%       3.0%
+            Reflection    20%       3.0%
+----------------------- ----- ----------
+3 (Lab)     Code          10%       1.5%
+----------------------- ----- ----------
+4 (Home)    Code          20%       3.0%
+            Reflection    20%       3.0%
+======================= ===== ==========
+                 Total:  100%      15.0%
+```
+ 
