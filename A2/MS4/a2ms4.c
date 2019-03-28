@@ -29,7 +29,7 @@ int main(void)
 {
     printSectionHeader("Final A#2-Milestone #4");
 
-    ContactManagerSystem();
+    contactManagerSystem();
 
     return 0;
 }
