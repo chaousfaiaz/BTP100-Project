@@ -76,12 +76,12 @@ int main (void)
 
     Contact Details
     ---------------
-    Name Details
+    Name Details:
     First name: Tom
     Middle initial(s): L. A.
     Last name: Wong Song
 
-    Address Details
+    Address Details:
     Street number: 20
     Street name: Keele Street
     Apartment: 40
