@@ -123,6 +123,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="a2ms2.c" />
+    <ClCompile Include="contactHelpers.c" />
+    <ClCompile Include="contacts.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="contactHelpers.h" />
+    <ClInclude Include="contacts.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
