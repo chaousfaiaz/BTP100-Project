@@ -175,7 +175,7 @@ void test06_getPositiveDouble(void)
     printf("TEST #6: Enter the number -22.11 [ENTER], the number 225.55: ");
 
     // You may want to comment the next line if you have not yet created the getPositiveDouble function:
-    dblValue = getPositiveDouble(1);
+    dblValue = getPositiveDouble();
 
     if (dblValue == 225.55)
     {
