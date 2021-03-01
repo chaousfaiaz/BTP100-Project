@@ -95,8 +95,8 @@ int main(void)
 void displayAccount(const struct Account account, const struct UserLogin login, const struct Demographic demo)
 {
     // Give this formatting to the student
-    printf("Acct# Acct.Type Birth Household-Income Country         Disp.Name       Login      Password\n");
-    printf("----- --------- ----- ---------------- --------------- --------------- ---------- --------\n");
+    printf("Acct# Acct.Type Birth Income      Country    Disp.Name       Login      Password\n");
+    printf("----- --------- ----- ----------- ---------- --------------- ---------- --------\n");
 
     // Display the respective data to align to the table header above:
 
