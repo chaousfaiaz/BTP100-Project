@@ -41,7 +41,7 @@ Watch and follow along with the posted YouTube video that demonstrates installat
 
 YouTube Link: https://youtu.be/t0xbX_ltvbU
 Duration    : 20 minutes
-Content     : Python installation, PyAutoGui library dependency, sample usage (IPC144: A1MS2)
+Content     : Python installation, PyAutoGui library dependency, sample usage (IPC144|BTP100: A1MS2)
 
 ## Step:2
 

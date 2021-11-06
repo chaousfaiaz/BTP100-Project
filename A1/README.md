@@ -1,6 +1,6 @@
 # BTP100-Project/Assignments (20% of term grade)
 
-## Assignment-2 (10% of term grade)
+## Assignment-1 (10% of term grade)
 ```
 Milestone   Assessment  Worth Term Grade
 =========== =========== ===== ==========
