@@ -1,2 +1,2 @@
-cp accountsMaster.txt accounts.txt
-cp ticketsMaster.txt tickets.txt
+copy accountsMaster.txt accounts.txt
+copy ticketsMaster.txt tickets.txt
