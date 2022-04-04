@@ -1,0 +1,53 @@
+1) The challenges included on how to manage or overcome the scripting in the context of the 
+methods used in preparing the logic, debugging, and testing are trying to match the output 
+exactly and trying to figure out what to write in the function so that the correct return 
+statement is received.The buffer part didn't require much coding since it was provided in flow chart. 
+The main problem was figuring out how to validate 
+char inputCharOption(char word){
+        
+        
+        int i;char woord = word;
+        char w[] = {qwErty};
+        
+        for(i = 0; i<6; i++){
+            do{
+            if(w[i] != woord){
+                printf("ERROR: Character must be one of [qwErty]:");
+            }
+            else{
+                return woord;
+            }
+            }while(w[i] != woord);
+        }
+ The various ways I had to validate a set of characters froma string array so that user input 
+matched the set of elements of character within that string would mean that the validation is a success       
+
+2) Varaibles within array elements can be initialized to 0 and it's best to initilize them as 
+such so that when an array is created dynamically and you want to place inputs within an array 
+it can be done by changing the value stored within that particular index. Null statements use
+‘\0’ which is defined to be a null character. It is a character with all bits set to zero. 
+When checking an array by iterating to see after how many iterations does the array become 
+null so that we make a count of length this null expression can be used.
+This has nothing to do with pointers. ‘\0’ is a character literal like an integer constant with the value zero.
+When there is a need to check whether a string pointer is pointing to a null character we use
+ 
+if (!*string_pointer) // this means if the string pointer is pointing at a null character.
+
+if (*string_pointer)// if the string pointer is pointing at a not-null character or there is a valid input
+
+
+3) In order to manage the standard input buffer espescially when there is residual data we need to 
+understand what a buffer is which is A buffer is a small region of memory that holds data temporarily and 
+provides intermediate storage between a device and a program as described in the ICT website. 
+I would ask my friend to understand whether or not he understood what the concept of buffer is after reading
+through all the course notes, and searching on the internet followed by course lectures about this topic. 
+In the project there is a flow chart that describes how the buffer is used to clear memory which is temporarily 
+stored between the program and the user input. Generally we use scanf when inputting data for use and it's 
+formatted because we use a format specfier like %d for integers or %c for characters etc. This allows the 
+program to take in the desired data type for use without error.
+The clearing of the buffer simply uses the getchar() function until it reaches null and removes it.
+void clear(void)
+ {
+         while (getchar() != '\n')
+                 ;  // empty statement intentional 
+ }
