@@ -20,6 +20,9 @@ piece of work is entirely of my own creation.
 #ifndef CLINIC_H
 #define CLINIC_H
 
+#include <stdio.h>
+#include <ctype.h>
+#include <string.h>
 
 //////////////////////////////////////
 // Module macro's (usable by any file that includes this header)
@@ -32,7 +35,7 @@ piece of work is entirely of my own creation.
 
 // C Strings: array sizes
 #define NAME_LEN 15
-#define PHONE_DESC_LEN 4
+#define PHONE_DESC_LEN 5
 #define PHONE_LEN 10
 
 
@@ -42,11 +45,18 @@ piece of work is entirely of my own creation.
 
 // Data type: Phone
 // ToDo:
-
+struct Phone {
+    char description[PHONE_DESC_LEN];
+    char number[PHONE_LEN];
+};
 
 // Data type: Patient 
 // ToDo:
-
+struct Patient {
+    int patientNumber;
+    char name[NAME_LEN];
+    struct Phone phone; 
+};
 
 // ClinicData type: Provided to student
 // !!! DO NOT MODIFY THIS DATA TYPE !!!
@@ -89,7 +99,7 @@ void menuPatientEdit(struct Patient* patient);
 
 // !!! DO NOT MODIFY THE BELOW PROTOTYPES !!!
 
-// Display's all patient data in the FMT_FORM | FMT_TABLE format
+// Displays all patient data in the FMT_FORM | FMT_TABLE format
 void displayAllPatients(const struct Patient patient[], int max, int fmt);
 
 // Search for a patient record based on patient number or phone number
@@ -135,3 +145,4 @@ void inputPhoneData(struct Phone* phone);
 
 
 #endif // !CLINIC_H
+
