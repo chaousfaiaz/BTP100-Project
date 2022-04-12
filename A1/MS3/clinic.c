@@ -1,10 +1,10 @@
 /*
 *****************************************************************************
                         Assignment 1 - Milestone 3
-Full Name  :
-Student ID#:
-Email      :
-Section    :
+Full Name  : MD Faiaz
+Student ID#: 164899213
+Email      : mfaiaz@myseneca.ca
+Section    : NBB
 
 Authenticity Declaration:
 I declare this submission is the result of my own work and has not been
@@ -380,7 +380,7 @@ void removePatient(struct Patient patient[], int max) {
 
 // View ALL scheduled appointments
 void viewAllAppointments(const struct ClinicData *clinic) {
-    int i, j;
+    int i;
     int length = 0;
     struct Appointment valid_appointments[clinic->maxAppointments];
     for (i = 0; i < clinic->maxAppointments; ++i) {
@@ -507,8 +507,8 @@ void removeAppointment(struct Appointment* appointment_array, int appointment_li
                 appointment_array[i].patientNumber == patient_array[index].patientNumber) {
                 printf("\n");
                 displayPatientData(&patient_array[index], FMT_FORM); // displays patient form
-                printf("Are you sure you want to remove this appointment? (y,n): ");
-                char select = inputCharOption("yn"); // makes user enter y or n
+                printf("Are you sure you want to remove this appointment (y,n): ");
+                select = inputCharOption("yn"); // makes user enter y or n
                 if (select == 'y') {
                     appointment_array[i].patientNumber = 0;
                     printf("\nAppointment record has been removed!\n\n");
@@ -748,7 +748,7 @@ void createTime(struct Time *time) {
 int importPatients(const char* datafile, struct Patient patients[], int max) {
     int count = 0;
     FILE *fp = fopen(datafile, "r");
-    while ((fscanf(fp, "%d|%[^|]|%[^|]|%[^\n]", &patients[count].patientNumber, patients[count].name, 
+    while ((fscanf(fp, "%d|%[^|]|%[^|]|%[^\n]\n", &patients[count].patientNumber, patients[count].name, 
                                                 patients[count].phone.description, patients[count].phone.number) != EOF) 
             && count != max) {
         ++count;

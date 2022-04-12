@@ -45,31 +45,21 @@ void suspend(void)
 // validates that the phone number is of length 10 and contains digits only
 // then displays the phone number
 void displayFormattedPhone(const char *number) {
-    int length = 0;
-    int not_all_digits = 0;
     int i;
-    int flag = 1;
-    // first check if number is NULL
+    int digits = 0;
     if (number == NULL) {
         printf("(___)___-____");
     } else {
-        // find length of phone number
-        while(flag) {
-            if (number[length] != '\0') {
-                ++length;
-            } else { // at null terminator we break
-                flag = 0;
+        // find how many digits the number has
+        for (i = 0; i < 10; ++i) { // find that number has 10 digits
+            if (isdigit(number[i])) {
+                ++digits;
             }
         }
-        // check that number contains only digits
-        for (i = 0; i < length; ++i) {
-            if(!(isdigit(number[i]))) {
-                not_all_digits = 1;
-            }
-        }
-        if (length != 10 || not_all_digits) { // if number length isn't 10 or number isn't only digits
+        // number isn't 10 digits long:
+        if (digits != 10) {
             printf("(___)___-____");
-        } else { // number satisifies conditions so it is printed
+        } else { // number IS 10 digits long
             printf("(");
             for (i = 0; i < 3; ++i) {
                 printf("%c", number[i]);
@@ -79,7 +69,7 @@ void displayFormattedPhone(const char *number) {
                 printf("%c", number[i]);
             }
             printf("-");
-            for (i = 6; i < length; ++i) {
+            for (i = 6; i < 10; ++i) {
                 printf("%c", number[i]);
             }
         }
@@ -159,7 +149,6 @@ char inputCharOption(const char word[]) {
     }
     // taking user input until it matches a character in word[]    
     int i;
-    int match = 0;
     flag = 1;
     char temp[50];
     while(flag) {
@@ -181,7 +170,7 @@ char inputCharOption(const char word[]) {
 // then takes user input for a C string until one that has a length within range is obtained  
 void inputCString(char *strptr, int min, int max) {
     char temp[50];
-    int length, i;
+    int length;
     int flag = 1;
     int flag2 = 1;
     while(flag) {
@@ -222,7 +211,7 @@ void inputCString(char *strptr, int min, int max) {
 // stores it in strptr
 void inputPhoneNumber(char *strptr, int num_length) {
     char temp[50];
-    int length, i;
+    int length;
     int flag = 1;
     int flag2 = 1;
     while(flag) {
@@ -238,9 +227,7 @@ void inputPhoneNumber(char *strptr, int num_length) {
             }
         }
         if (length == num_length) { // length is what phone number length should be
-            for (i = 0; i < num_length; ++i ) { // assign the string in temp to the strptr  
-                strptr[i] = temp[i];
-            }
+            strcpy(strptr, temp);
             flag = 0; // this ends loop
         } else { // not correct length
             clearInputBuffer();

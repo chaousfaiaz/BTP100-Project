@@ -1,0 +1,45 @@
+1) 
+
+Two of the functions I created were declared in clinic.h. These are:
+ // takes user input and sets a valid date
+void createDate(struct Date *date);
+// takes user input and sets a valid time
+void createTime(struct Time *time);
+
+void createDate(struct Date *date) takes a pointer to a date, and then prompts user input.
+The user has to enter a valid year (I set the limit between current year and up to 5 years from now, i.e. 2022-2027),
+a valid month (1-12), and a valid day depending on the length of the month. 
+The length of the month is determined by:
+// returns the length of the month
+int monthLength(int month, int year);
+monthLength is a function I declared in core.h. It takes a month and year, the year is given to another function I declared in core.h
+called int isLeapYear(int year) which determines if that year is a leap year, which will lead to February having 29 days. These functions
+are all important to this program because in several instances the user is asked for input for a date (which is where createDate
+is useful, and consequently monthLength and isLeapYear are called).
+createTime works in a similar way to createDate, and is also valuable to the program because the user is asked to enter a time, which
+must be validated, and is done so through createTime.
+
+2) I wrote 40 lines of code for addAppointment. Two of the helper functions I talked about in Question 1 were very useful here.
+I used createDate and createTime because addAppointment prompts the user to input a date and a time for the appointment they want to create.
+createDate takes input for the date and validates that all the fields are within range, and createTime does the same for time.
+createDate is 16 lines of code and createTime is 5 lines of code so through those functions I was able to save 21 lines of code
+from the addAppoinment total. Another helper function I created to aid addAppointment is:
+int timeslotMatch(const struct Appointment appointments[], int new_appointment_index);
+which takes an array of Appointment structs and the index wherein the newly created appointment is to go into the array.
+timeslotMatch compares that new appointment's Date and Time fields to those of the other appointments in the array, and returns 1 if
+any matches were found, and 0 otherwise. This means timeslotMatch tells addAppointment whether or not there is overlap of schedule,
+and if there is then addAppointment knows to prompt user to input a new time and date. timeslotMatch is 13 lines, which added to the
+21 from before means 34 lines were subtracted from the addAppointment line total.
+
+3) 
+The amount of time I spent on each function was based on how all my other functions were written. 
+For me  viewAllAppointments was the most difficult to code because I could not figure out how to make the appointments appear
+chronologically. I actually had to come back to it after I coded viewAppointmentSchedule. I realized that the order of appointments in
+clinic.appointments was not correlated to the order of patients in clinic.patients and so I would first have to sort the array of appointments
+into chronological order and then print the patient based on what patient number is stored in that appointment. 
+To sort my array of appointments into chronological order I created a helper function called:
+void sortAppointmentArray(struct Appointment *arr, int arr_length)
+which uses the bubble sort algorithm to iterate through the array of appointments and order them chronologically.
+Besides spending the most time on the viewAllAppointments function, I spent two days planning what helper functions I would need,
+and then one day on coding all of them. 
+
